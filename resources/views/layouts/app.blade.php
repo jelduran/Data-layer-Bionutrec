@@ -18,6 +18,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini">
+  <script>0</script>
     <div class="wrapper">
 
         <!-- Navbar -->

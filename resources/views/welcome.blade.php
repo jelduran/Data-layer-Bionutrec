@@ -76,7 +76,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   {{ config('app.name', 'Laravel') }}
+                   <!--{{ config('app.name', 'Laravel') }}-->
+                   <img src="img/logoBionutrec.png" alt="Logo Bionutrec">
                 </div>
             </div>
         </div>
