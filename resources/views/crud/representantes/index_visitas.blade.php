@@ -33,9 +33,27 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->med_nombres }} {{ $item->med_apellidos }}</td>
                     <td>{{ $item->rep_nombres }} {{ $item->rep_apellidos }}</td>
-                    <td class="text-center">{{ $item->registro ? 'Si' : 'No' }}</td>
-                    <td class="text-center">{{ $item->mail ? 'Si' : 'No' }}</td>
-                    <td class="text-center">{{ $item->muestra ? 'Si' : 'No' }}</td>
+                    <td class="text-center">
+                      @if ($item->registro)
+                        <label class="badge badge-success">Si</label>
+                      @else
+                        <label class="badge badge-danger">No</label>                          
+                      @endif
+                    </td>
+                    <td class="text-center">
+                      @if ($item->mail)
+                        <label class="badge badge-success">Si</label>
+                      @else
+                        <label class="badge badge-danger">No</label>                          
+                      @endif
+                    </td>
+                    <td class="text-center">
+                      @if ($item->muestra)
+                        <label class="badge badge-success">Si</label>
+                      @else
+                        <label class="badge badge-danger">No</label>                          
+                      @endif
+                    </td>
                     <td>{{ $item->fecha_hora }}</td>
                   </tr>
                   @endforeach

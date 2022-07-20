@@ -32,6 +32,7 @@
                     <th>Telefono</th>
                     <th>Departamento</th>
                     <th>Ciudad</th>
+                    <th>Habeas Data?</th>
                     <th>Opciones</th>
                   </tr>
                 </thead>
@@ -43,11 +44,22 @@
                     <td>{{ $item->apellidos }}</td>
                     <td>{{ $item->especialidad }}</td>
                     <td>{{ $item->institucion }}</td>
-                    <td>{{ $item->panel }}</td>
+                    <td>
+                      @if ($item->panel=="Digital")
+                        <label class="badge badge-info">Digital</label>
+                      @else
+                        <label class="badge badge-warning">Fisico</label>
+                      @endif
+                    </td>
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->telefono }}</td>
                     <td>{{ $item->departamento }}</td>
                     <td>{{ $item->ciudad }}</td>
+                    <td>
+                      @if ($item->habeas_data)
+                        <label class="badge badge-success">Autoriza</label>    
+                      @endif
+                    </td>
                     <td class="col-md-2">
                       <a href="{{ url('/medicos/' . $item->id) }}" title="Ver Medico"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>
                           Ver</button></a>

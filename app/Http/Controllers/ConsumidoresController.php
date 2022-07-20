@@ -7,6 +7,14 @@ use App\Models\Consumidor;
 
 class ConsumidoresController extends Controller
 {
+  function __construct()
+    {
+         $this->middleware('permission:consumidor-list|consumidor-create|consumidor-edit|consumidor-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:consumidor-create', ['only' => ['create','store']]);
+         $this->middleware('permission:consumidor-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:consumidor-delete', ['only' => ['destroy']]);
+    }
+
   public function index()
   {
       $consumidores = Consumidor::all();

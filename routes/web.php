@@ -9,6 +9,8 @@ use App\Http\Controllers\RepresentantesController;
 use App\Http\Controllers\TransferencistasController;
 use App\Http\Controllers\InstitucionesController;
 use App\Http\Controllers\FarmaciasController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -80,7 +82,6 @@ Route::group(['middleware' => ['auth']], function() {
 require __DIR__.'/auth.php';
 
 Route::resource("/operativos", OperativosController::class);
-Route::resource("/consumidores", ConsumidoresController::class);
 Route::resource("/dependientes", DependientesController::class);
 Route::resource("/medicos", MedicosController::class);
 Route::resource("/representantes", RepresentantesController::class);

@@ -32,8 +32,20 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->dep_nombres }} {{ $item->dep_apellidos }}</td>
                     <td>{{ $item->transfer_nombres }} {{ $item->transfer_apellidos }}</td>
-                    <td class="text-center">{{ $item->material ? 'Si' : 'No' }}</td>
-                    <td class="text-center">{{ $item->invitacion ? 'Si' : 'No' }}</td>
+                    <td class="text-center">
+                      @if ($item->material)
+                        <label class="badge badge-success">Si</label>
+                      @else
+                        <label class="badge badge-danger">No</label>                          
+                      @endif
+                    </td>
+                    <td class="text-center">
+                      @if ($item->invitacion)
+                        <label class="badge badge-success">Si</label>
+                      @else
+                        <label class="badge badge-danger">No</label>                          
+                      @endif
+                    </td>
                     <td class="text-center">{{ $item->fecha_hora }}</td>
                   </tr>
                   @endforeach

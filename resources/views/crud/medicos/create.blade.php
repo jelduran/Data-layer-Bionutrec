@@ -33,6 +33,8 @@
               <input type="text" name="departamento" id="departamento" class="form-control"></br>
               <label>Ciudad</label></br>
               <input type="text" name="ciudad" id="ciudad" class="form-control"></br>
+              <input type="checkbox" name="habeas_data" id="autorizacion" value="si">
+              <label for="autorizacion"> Autorizo a Bionutrec a conservar mis datos y a contactarme a través de correo electrónico.</label><br>
               <input type="submit" value="Save" class="btn btn-success"></br>
             </form>
 
