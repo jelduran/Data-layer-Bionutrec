@@ -12,6 +12,7 @@ use App\Http\Controllers\FarmaciasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AudienciaController;
+use App\Http\Controllers\MarketingController;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -89,8 +90,10 @@ Route::resource("/representantes", RepresentantesController::class);
 Route::resource("/transferencistas", TransferencistasController::class);
 Route::resource("/instituciones", InstitucionesController::class);
 Route::resource("/farmacias", FarmaciasController::class);
+Route::resource("/campañas", MarketingController::class);
 
 Route::get('/visitas_medicos', [RepresentantesController::class, 'index_visitas_medicos']);
 Route::get('/visitas_dependientes', [TransferencistasController::class, 'index_visitas_dependientes']);
+Route::get('/registrados', [MarketingController::class, 'index_registrados']);
 
 Route::get("/apimch", [AudienciaController::class, 'test_api']);
